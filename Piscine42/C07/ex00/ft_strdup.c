@@ -6,7 +6,7 @@
 /*   By: lusokol <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 10:18:51 by lusokol           #+#    #+#             */
-/*   Updated: 2019/09/05 10:30:54 by lusokol          ###   ########.fr       */
+/*   Updated: 2019/09/08 12:21:11 by lusokol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int		ft_strlen(char *str)
 
 char	*ft_strdup(char *src)
 {
-	char *str;
-	int i;
+	char	*str;
+	int		i;
 
 	str = malloc(ft_strlen(src) * sizeof(char) + 1);
 	if (str == NULL)
