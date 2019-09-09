@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lusokol <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/02 14:23:46 by lusokol           #+#    #+#             */
-/*   Updated: 2019/09/09 12:20:12 by lusokol          ###   ########.fr       */
+/*   Created: 2019/09/09 12:08:16 by lusokol           #+#    #+#             */
+/*   Updated: 2019/09/09 12:18:45 by lusokol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char a)
+void	ft_putchar2(char a)
 {
 	write(1, &a, 1);
 }
@@ -24,7 +24,7 @@ void	ft_putstr(char *str)
 	i = 0;
 	while (str[i])
 	{
-		ft_putchar(str[i]);
+		ft_putchar2(str[i]);
 		i++;
 	}
 }

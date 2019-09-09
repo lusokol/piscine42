@@ -6,7 +6,7 @@
 /*   By: lusokol <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 10:28:51 by lusokol           #+#    #+#             */
-/*   Updated: 2019/09/08 16:24:37 by lusokol          ###   ########.fr       */
+/*   Updated: 2019/09/09 10:19:29 by lusokol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int		backtrack(int pos, int n, int grid[6][6])
 		val = 0;
 		while (++val <= n)
 		{
+			print_grid(n, grid);
+			printf("\n");
 			grid[row][col] = val;
 			if (check_grid(pos, n, grid))
 				if (backtrack(pos + 1, n, grid))
