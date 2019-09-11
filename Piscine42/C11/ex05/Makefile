@@ -6,40 +6,36 @@
 #    By: lusokol <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/09 15:34:36 by lusokol           #+#    #+#              #
-#    Updated: 2019/09/09 17:32:09 by lusokol          ###   ########.fr        #
+#    Updated: 2019/09/10 18:59:18 by lusokol          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+SRCS	=	doop.c			\
+			ft_putnbr.c		\
+			operateurs.c
 
-RM = rm -f
+SRCS_PATH	=	./srcs/
+OBJS		=	$(addprefix $(SRCS_PATH), $(SRCS:.c=.o))
+	INCLUDES	=	-I./includes/
+	NAME		=	do-op
+	CC			=	gcc
+	CFLAGS		+=	-Wall -Wextra -Werror
+	RM			=	rm -f
 
-CFLAGS = -Wall -Wextra -Werror
+all:			$(NAME)
 
-PATH_SRCS = ./srcs/
+$(NAME):		$(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
-HEADER = ./includes
-
-SRCS    =   ./srcs/ft_putchar.c\
-			./srcs/ft_swap.c\
-			./srcs/ft_putstr.c\
-			./srcs/ft_strlen.c\
-			./srcs/ft_strcmp.c\
-
-OBJ = ${SRCS:.c=.o}
-
-all: $(NAME)
-
-.c.o :
-	gcc -c $(CFLAGS) -I $(HEADER) $< -o $(<:.c=.o)
-
-$(NAME) : ${OBJ}
-	ar rc $(NAME) $(OBJ)
+.c.o:
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $(<:.c=.o)
 
 clean:
-	$(RM) ${OBJ}
+	$(RM) $(OBJS)
 
-fclean: clean
+fclean:			clean
 	$(RM) $(NAME)
 
-re : fclean all
+re:				fclean all
+
+.PHONY:			all clean fclean re
