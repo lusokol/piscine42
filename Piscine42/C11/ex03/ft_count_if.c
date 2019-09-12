@@ -6,7 +6,7 @@
 /*   By: lusokol <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 12:57:20 by lusokol           #+#    #+#             */
-/*   Updated: 2019/09/10 14:19:22 by lusokol          ###   ########.fr       */
+/*   Updated: 2019/09/11 15:00:41 by lusokol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ int		ft_count_if(char **tab, int length, int (*f)(char*))
 
 	count = 0;
 	i = 0;
-	while (tab[i])
+	while (i < length)
 	{
 		if ((*f)(tab[i]) != 0)
 			count++;
 		i++;
 	}
-	return (0);
+	return (count);
 }

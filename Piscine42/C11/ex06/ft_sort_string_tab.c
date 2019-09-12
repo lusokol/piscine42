@@ -6,17 +6,9 @@
 /*   By: lusokol <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 11:34:19 by lusokol           #+#    #+#             */
-/*   Updated: 2019/09/11 12:47:58 by lusokol          ###   ########.fr       */
+/*   Updated: 2019/09/11 15:04:46 by lusokol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
-
-void	ft_putstr(char *str)
-{
-	while (*str)
-		write(1, str++, 1);
-}
 
 void	ft_swap(char **s1, char **s2)
 {
