@@ -6,7 +6,7 @@
 /*   By: lusokol <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/14 11:05:54 by lusokol           #+#    #+#             */
-/*   Updated: 2019/09/14 12:09:45 by lusokol          ###   ########.fr       */
+/*   Updated: 2019/09/18 13:54:10 by lusokol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,7 @@ typedef struct	s_list
 	struct s_list	*next;
 	void			*data;
 }				t_list;
+
+t_list			*ft_create_elem(void *data);
 
 #endif

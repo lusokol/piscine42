@@ -6,7 +6,7 @@
 /*   By: lusokol <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/14 11:05:54 by lusokol           #+#    #+#             */
-/*   Updated: 2019/09/14 14:51:02 by lusokol          ###   ########.fr       */
+/*   Updated: 2019/09/18 13:49:18 by lusokol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 struct	s_list
 {
-	void			data;
 	struct s_list	*next;
+	void			*data;
 }		t_list;
 
 #endif
